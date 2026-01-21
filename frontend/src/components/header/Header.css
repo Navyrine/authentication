@@ -1,0 +1,38 @@
+.header
+{
+  display: flex;
+  width: 100vw;
+  height: 70px;
+  padding: 10px;
+  background-color: #050E3C;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.header ul 
+{
+  display: flex;
+  justify-content: space-evenly;
+  gap: 15px;
+  list-style-type: none;
+}
+
+.link
+{
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+}
+
+.link:active
+{
+  font-weight: bold;
+  color: red;
+}
+
+.link:hover
+{
+  color: red;
+}
