@@ -12,6 +12,15 @@ function useAuth() {
     localStorage.getItem("refreshToken") || null,
   );
 
+  async function handleRegister(username, password) {
+    try {
+      await authAxios.post(`/register`, { username, password });
+    } catch (err) {
+      console.log(err);
+      throw err;
+    }
+  }
+
   async function handleLogin(username, password) {
     try {
       const response = await authAxios.post(`/login`, { username, password });
@@ -95,6 +104,7 @@ function useAuth() {
   return {
     token,
     isAuthenticated: !!token,
+    handleRegister,
     handleLogin,
     handleLogout,
     authAxios,
